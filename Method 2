@@ -1,0 +1,19 @@
+def subArray(arr):
+    s = set()
+    s.add(0)
+
+    total = 0
+
+    for i in arr:
+        total += i
+
+        if total in s:
+            return True
+
+        s.add(total)
+    return False
+
+
+array = [-3, 2, 3, 1, 6]
+
+print(subArray(array))
